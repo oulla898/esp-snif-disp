@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sultan Qaboos University - College of Engineering Weekly Report</title>
+  <style>
+    body {
+      font-family: 'Times New Roman', Times, serif;
+      background: #fff;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      width: 800px;
+      margin: 20px auto;
+      border: 2px solid #000;
+      background: #fff;
+      padding: 0 20px 20px 20px;
+      box-sizing: border-box;
+    }
+    .header {
+      display: flex;
+      align-items: center;
+      border-bottom: 2px solid #000;
+      padding-bottom: 8px;
+      margin-bottom: 8px;
+    }
+    .logo {
+      width: 80px;
+      height: 80px;
+      background: #eee;
+      border: 1px solid #aaa;
+      margin-right: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      color: #888;
+    }
+    .header-center {
+      flex: 1;
+      text-align: center;
+    }
+    .header-center h2 {
+      margin: 0;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .header-center h3 {
+      margin: 0;
+      font-size: 16px;
+      font-weight: normal;
+    }
+    .header-right {
+      width: 180px;
+      border: 1px solid #000;
+      padding: 4px 8px;
+      font-size: 14px;
+      background: #f9f9f9;
+    }
+    .header-right label {
+      font-weight: bold;
+    }
+    .section-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 8px;
+    }
+    .section-table td, .section-table th {
+      border: 1px solid #000;
+      padding: 4px 6px;
+      font-size: 14px;
+      vertical-align: top;
+    }
+    .section-table th {
+      background: #e6e6e6;
+      font-weight: bold;
+      text-align: left;
+    }
+    .vert-label {
+      writing-mode: vertical-rl;
+      text-align: center;
+      background: #e6b89c;
+      font-weight: bold;
+      font-size: 15px;
+      letter-spacing: 2px;
+      color: #000;
+      border-right: 2px solid #000;
+    }
+    .vert-label-sup {
+      background: #f3cfa1;
+    }
+    .dept-checkboxes label {
+      margin-right: 10px;
+      font-size: 13px;
+    }
+    .tasks-section {
+      background: #e6f2d6;
+      border: 1px solid #000;
+      margin-bottom: 0;
+      font-size: 14px;
+      padding: 2px 0 2px 6px;
+      font-weight: bold;
+    }
+    .tasks-table, .plan-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 0;
+    }
+    .tasks-table td, .plan-table td {
+      border: 1px solid #000;
+      height: 22px;
+      font-size: 14px;
+      padding: 2px 6px;
+    }
+    .progress-section {
+      background: #ffe5cc;
+      border: 1px solid #000;
+      font-size: 14px;
+      padding: 2px 0 2px 6px;
+      font-weight: bold;
+    }
+    .plan-section {
+      background: #cce6ff;
+      border: 1px solid #000;
+      font-size: 14px;
+      padding: 2px 0 2px 6px;
+      font-weight: bold;
+    }
+    .problems-section, .supervisor-section {
+      font-size: 14px;
+      font-weight: bold;
+      margin-top: 6px;
+      margin-bottom: 2px;
+    }
+    .problems-box, .supervisor-box {
+      width: 100%;
+      height: 40px;
+      border: 1px solid #000;
+      font-size: 14px;
+      padding: 4px;
+      resize: vertical;
+      box-sizing: border-box;
+    }
+    .signatures {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 12px;
+      margin-bottom: 4px;
+    }
+    .signatures .sig-block {
+      width: 48%;
+      border: 1px solid #000;
+      padding: 6px 10px;
+      font-size: 13px;
+      background: #f9f9f9;
+    }
+    .sig-label {
+      font-weight: bold;
+      margin-bottom: 2px;
+      display: block;
+    }
+    .footer-note {
+      font-size: 12px;
+      color: #333;
+      margin-top: 8px;
+      border-top: 1px solid #aaa;
+      padding-top: 4px;
+    }
+    .red {
+      color: #b30000;
+      font-weight: bold;
+    }
+    .orange {
+      color: #e67300;
+      font-weight: bold;
+    }
+    .page-num {
+      position: absolute;
+      right: 40px;
+      bottom: 10px;
+      font-size: 12px;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div style="position:absolute;top:30px;right:60px;z-index:10;">
+      <button onclick="window.print()" style="padding:6px 18px;font-size:15px;">Print as PDF</button>
+    </div>
+    <div class="header">
+      <div class="logo"><img src="Screenshot 2025-07-10 155529.png" alt="Logo" style="width:80px;height:80px;object-fit:contain;"></div>
+      <div class="header-center">
+        <div style="font-size:13px;">College of Engineering, SQU</div>
+        <h2>Sultan Qaboos University<br>College of Engineering</h2>
+        <h3>Office of Assistant Dean for<br>Industrial Training and Community Services</h3>
+      </div>
+      <div class="header-right">
+        <label>Weekly Report</label><br>
+        Week #: <input type="text" style="width:30px;"> <br>
+        Date: <input type="text" style="width:70px;">
+      </div>
+    </div>
+    <table class="section-table">
+      <tr>
+        <td rowspan="3" class="vert-label">Student</td>
+        <td>Full Name: <input type="text" style="width:220px;"></td>
+        <td>ID: <input type="text" style="width:120px;"></td>
+      </tr>
+      <tr>
+        <td class="dept-checkboxes">
+          Department:
+          <label><input type="checkbox"> CAE</label>
+          <label><input type="checkbox" checked> ECE</label> <!-- Pre-checked for ECE -->
+          <label><input type="checkbox"> MIE</label>
+          <label><input type="checkbox"> PCE</label>
+          <label><input type="checkbox"> MCE</label>
+        </td>
+        <td>Mobile: <input type="text" style="width:120px;"></td>
+      </tr>
+      <tr>
+        <td colspan="2"></td>
+      </tr>
+      <tr>
+        <td rowspan="2" class="vert-label vert-label-sup">Supervisor</td>
+        <td>Full Name: <input type="text" style="width:220px;"></td>
+        <td>Email: <input type="text" style="width:120px;"></td>
+      </tr>
+      <tr>
+        <td>Training Company &amp; Department: <input type="text" style="width:180px;"></td>
+        <td>Tel./Mobile: <input type="text" style="width:120px;"></td>
+      </tr>
+    </table>
+    <div class="tasks-section">Tasks Completed (Briefly Describe any tasks that you completed during this week):</div>
+    <table class="tasks-table">
+      <tr><td><input type="text" style="width:99%;"></td><td><input type="text" style="width:99%;"></td></tr>
+      <tr><td><input type="text" style="width:99%;"></td><td><input type="text" style="width:99%;"></td></tr>
+      <tr><td><input type="text" style="width:99%;"></td><td><input type="text" style="width:99%;"></td></tr>
+    </table>
+    <div class="progress-section">Tasks in Progress (if any):</div>
+    <table class="tasks-table">
+      <tr><td><input type="text" style="width:99%;"></td><td><input type="text" style="width:99%;"></td></tr>
+      <tr><td><input type="text" style="width:99%;"></td><td><input type="text" style="width:99%;"></td></tr>
+    </table>
+    <div class="plan-section">Plan for next week (if different from this week):</div>
+    <table class="plan-table">
+      <tr><td><input type="text" style="width:99%;"></td><td><input type="text" style="width:99%;"></td></tr>
+      <tr><td><input type="text" style="width:99%;"></td><td><input type="text" style="width:99%;"></td></tr>
+    </table>
+    <div class="problems-section">Problems/Challenges/Recommendations (if any):</div>
+    <textarea class="problems-box"></textarea>
+    <div class="supervisor-section">Supervisor Comments (your feedback is very important for our continuing improvement):</div>
+    <textarea class="supervisor-box"></textarea>
+    <div class="signatures">
+      <div class="sig-block">
+        <span class="sig-label">Student:</span>
+        I have read and understood the whole content of the Students’ Training Manual.<br>
+        Signature: <span style="display:inline-block; border-bottom:1px dotted #000; width:120px; vertical-align:middle;"></span>
+        <img src="download.png" alt="Student Signature" style="height:32px;vertical-align:middle;margin-left:8px;">
+      </div>
+      <div class="sig-block">
+        <span class="sig-label">Supervisor:</span>
+        I will do my best to guide the student towards achieving all required deliverables.<br>
+        Signature: <span style="display:inline-block; border-bottom:1px dotted #000; width:120px;"></span>
+      </div>
+    </div>
+    <div class="footer-note">
+      <span class="orange">Note:</span> A copy of this report should be faxed to 24413416 or scanned and emailed to your SQU supervisor on a weekly basis. <span class="red">Originals should be placed in the Appendix of the Final Report.</span>
+    </div>
+    <div class="page-num">11</div>
+  </div>
+</body>
+</html> 

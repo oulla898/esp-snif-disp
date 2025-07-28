@@ -1,0 +1,65 @@
+Project Title:
+Wi-Fi Packet Sniffer Using ESP32 for Wireless Device Detection and Basic Network Monitoring
+🎯 Objective (6 Weeks):
+Build a firmware-level wireless packet sniffer on the ESP32 platform that captures 802.11 frames, classifies traffic types, monitors nearby wireless devices, detects anomalies (e.g., bursts of probe requests, deauth attacks), and optionally visualizes captured data on a PC.
+🛠️ Tools & Components Required:
+ESP32 Development Board (e.g., ESP32 DevKitC)
+Arduino IDE or ESP-IDF (C/C++)
+USB cable for serial communication
+Optional: SD Card Module (for local logging)
+Serial Monitor Tool (Arduino IDE, PuTTY, or RealTerm)
+📅 6-Week Project Timeline
+✅ Week 1: Project Setup & Wi-Fi Frame Fundamentals
+Goals:
+Learn Wi-Fi frame types: Beacon, Probe Request, Authentication, etc.
+Set up ESP32 development environment (Arduino IDE or ESP-IDF).
+Load basic Wi-Fi sniffing example and print raw frame metadata over serial.
+Deliverables:
+Working development setup.
+Captured frames with channel, MAC, RSSI, frame type (printed over UART).
+✅ Week 2: Frame Filtering and Frame Type Classification
+Goals:
+Implement frame-type filtering (e.g., only show Probe Requests).
+Classify captured frames: Management, Control, Data.
+Parse MAC addresses and identify BSSIDs and client devices.
+Deliverables:
+Code that filters and classifies frames.
+Output showing clear frame type labels and device MACs.
+
+
+✅ Week 3: Channel Hopping and Device Tracking
+Goals:
+Implement channel hopping (e.g., every 200 ms rotate through channels 1–13).
+Maintain a registry of unique MAC addresses observed per channel.
+Track signal strength and appearance frequency.
+Count total unique devices and group by signal strength range (e.g., strong, medium, weak).
+Deliverables:
+Channel-hopping sniffer with per-device tracking.
+Serial output or table summarizing active devices.
+✅ Week 4: Anomaly Detection (DoS / Deauth / Probe Flood)
+Goals:
+Detect suspicious activity:
+Devices sending frequent probe requests.
+Excessive deauthentication frames (possible DoS).
+Print alerts when thresholds are exceeded.
+Tag suspicious MACs for visualization later.
+Deliverables:
+Real-time alerts printed over UART for detected anomalies.
+Log of flagged MACs and frame counts.
+✅ Week 5: Data Logging and Optional PC Visualization
+Goals:
+Store captured data (e.g., MAC, RSSI, timestamp, type) to SD card or stream to PC.
+Format logs in CSV or JSON.
+Build a basic Python visualizer (bar charts, RSSI trends, device heatmap).
+Deliverables:
+Example log file.
+Python script (optional) for offline analysis/plotting.
+✅ Week 6: Final Integration, Testing, and Presentation
+Goals:
+Finalize codebase and test in multiple environments (e.g., campus, café, home).
+Prepare a final report: architecture, methodology, results, limitations.
+Prepare presentation slides and demo.
+Deliverables:
+Final code (well-commented, structured).
+Project report (4–6 pages) or poster.
+Live or recorded demo (real-time monitoring + detection).

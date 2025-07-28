@@ -1,0 +1,96 @@
+
+WEEKLY REPORT FORM - ESP32 WiFi Sniffer Project
+===============================================
+
+STUDENT INFORMATION:
+-------------------
+Name: Almoulla Al Maawali
+Student ID: Your Student ID
+Course Code: COMP 499
+
+SUPERVISOR INFORMATION:
+---------------------
+Name: Dr. Hasan Bulut
+Email: hasan.bulut@ege.edu.tr
+Phone: +90 (232) 311 2596
+
+WEEK INFORMATION:
+----------------
+Week Number: 1
+Week Period: 16/12/2024 to 22/12/2024
+Report Date: 10/07/2025
+
+PROJECT DETAILS:
+---------------
+Project Title: Wi-Fi Packet Sniffer Using ESP32 for Wireless Device Detection and Basic Network Monitoring
+
+WEEKLY OBJECTIVES:
+-----------------
+1. Learn Wi-Fi frame types: Beacon, Probe Request, Authentication, etc.
+2. Set up ESP32 development environment with PlatformIO
+3. Load basic Wi-Fi sniffing example and print raw frame metadata over serial
+
+ACTIVITIES COMPLETED:
+--------------------
+• ✅ Set up PlatformIO development environment for ESP32
+• ✅ Created basic WiFi packet sniffer using ESP32 promiscuous mode
+• ✅ Implemented frame capture and metadata extraction (channel, MAC, RSSI, frame type)
+• ✅ Added frame type classification (Management, Control, Data frames)
+• ✅ Implemented channel hopping (switches every 2 seconds through channels 1-13)
+• ✅ Added smart filtering to reduce output spam and show only interesting frames
+• ✅ Created comprehensive README with usage instructions and legal warnings
+
+TECHNICAL ACHIEVEMENTS:
+----------------------
+• Successfully captured WiFi management frames (beacons, probe requests/responses)
+• Implemented real-time frame analysis with RSSI monitoring
+• Added SSID extraction from beacon and probe request frames
+• Created statistics tracking (interesting frames vs total frames per channel)
+• Developed clean, well-documented code structure
+
+CHALLENGES FACED:
+----------------
+• Initial output was very noisy with too many frames - solved with smart filtering
+• Understanding WiFi frame structure and MAC address positioning
+• Managing channel switching timing to capture maximum devices
+
+SOLUTIONS IMPLEMENTED:
+---------------------
+• Created is_interesting_frame() function to filter out data/control frames
+• Added proper frame type and subtype classification
+• Implemented channel switching with 2-second intervals for optimal coverage
+
+NEXT WEEK PLAN:
+--------------
+• Implement device tracking and MAC address registry
+• Add signal strength grouping (strong, medium, weak)
+• Develop anomaly detection for probe floods and deauth attacks
+• Create device activity statistics and reporting
+
+PROJECT METRICS:
+---------------
+Hours Spent: 15-20 hours
+Code Lines Written: ~300 lines of C++ code
+Files Created: main.cpp, platformio.ini, README.md
+
+TECHNICAL SPECIFICATIONS:
+------------------------
+Hardware Used: ESP32 Wrover Dev Board
+Software Used: PlatformIO, Arduino Framework, Serial Monitor
+Libraries Used: WiFi, esp_wifi, esp_event, esp_log, nvs_flash
+
+DELIVERABLES STATUS:
+-------------------
+• ✅ Working development setup with PlatformIO
+• ✅ Captured frames with channel, MAC, RSSI, frame type over UART
+• ✅ Frame filtering and classification system
+• ✅ Channel hopping implementation
+• ✅ GitHub repository with complete documentation
+
+ADDITIONAL INFORMATION:
+----------------------
+Repository URL: https://github.com/oulla898/esp-sniffer
+Demo Available: Yes - Real-time WiFi packet capture via serial monitor
+
+SIGNATURE: _____________________
+DATE: 10/07/2025
